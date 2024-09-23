@@ -6,7 +6,9 @@ const app = express();
 const router = require('./router');
 const port = 8000;
 
-app.use(cors());
+app.use(cors()); // Allow CORS
+
+app.options('*', cors()); // Allow preflight requests for all routes
 
 app.use(express.json());
 app.use('/', router);
