@@ -12,6 +12,7 @@ const addressRouter = require("./src/address");
 const socialLinksRouter = require("./src/socialLinks");
 const adultRouter = require("./src/adult");
 const mobileMenuOptionRouter = require("./src/mobileMenuOption");
+const pincodeRouter = require("./src/pincode");
 
 // Root route
 router.get('/', (req, res) => {
@@ -31,6 +32,7 @@ router.use('/socialLinks', socialLinksRouter);
 
 router.use('/adult', adultRouter);
 router.use('/mobileMenuOption', mobileMenuOptionRouter);
+router.use('/pincode', pincodeRouter);
 
 // Fallback route for undefined paths
 router.use('*', (req, res) => {
